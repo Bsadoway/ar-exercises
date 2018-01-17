@@ -5,13 +5,10 @@ require_relative './exercise_3'
 require_relative './exercise_4'
 require_relative './exercise_5'
 require_relative './exercise_6'
+require_relative './exercise_7'
 
-puts "Exercise 7"
+puts "Exercise 8"
 puts "----------"
 
-# Your code goes here ...
-puts "Enter a store name"
-tmp = gets.chomp
-@store = Store.create(name: tmp)
-puts @store.errors.messages
-Store.create(name: tmp, womens_apparel: true, annual_revenue: 400000)
+@employee = @store1.employees.create(first_name: "Mr.", last_name: "Mittens", hourly_rate: 200)
+p @employee.password
